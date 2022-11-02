@@ -7,14 +7,39 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
+@section Css{
 
-<p> Bugünün Tarihi : 
-</p>
+     <link rel="stylesheet" href="~/css/example.css" asp-append-version="true" />
 
-@{
-    var datetime = DateTime.Now.ToShortDateString();
-    var message = "Merhaba";
+    <style>
 
-    @:Bugünün tarihi : @datetime
+        h1{
+        color:blue;
+        background-color:powderblue
+        }
+
+        
+        
+    </style>
+
 
 }
+
+@section Scripts{
+
+    <script type="text/javascript"> 
+        //alert ("Sayfamıza Hoşgeldin")
+
+//$(document).ready(function(){
+
+//    consoleilog("Sayfamıza hoşgeldin")
+//})
+         </script>
+}
+
+<h1>Merhaba Dünya</h1>
+<h2>Merhaba Dünya</h2>
+
+@*<partial name="_MenuPartialView" />
+@await Html.PartialAsync("_MenuPartialView")*@
+
